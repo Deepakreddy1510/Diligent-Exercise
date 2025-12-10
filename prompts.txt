@@ -1,0 +1,34 @@
+# Prompt used for generating synthetic e-commerce data:
+Create a Python script that generates synthetic e-commerce data and stores it in around 5 CSV files:
+- customers.csv
+- products.csv
+- orders.csv
+- order_items.csv
+- reviews.csv
+
+Use Faker for names, emails, descriptions, and timestamps.  
+Make sure IDs match properly between tables (customer_id, product_id, order_id).  
+Add random prices, quantities, order statuses, and ratings so the data is suitable for running SQL joins later.
+
+------------------------------------------------------------
+
+# Prompt used for creating the SQLite ingestion script:
+Write a Python script that reads the 5 CSV files and loads them into a SQLite database named ecom.db.
+The script should:
+- Create tables (customers, products, orders, order_items, reviews)
+- Use appropriate columns and primary keys
+- Use Python's sqlite3 + csv modules
+- Insert every row from each CSV into the correct table
+
+Keep the script simple and easy to run.
+
+------------------------------------------------------------
+
+# Prompt used for generating SQL queries:
+Write SQL queries for a SQLite database that:
+1. Calculates order totals by joining orders and order_items
+2. Finds top customers by total spend
+3. Shows product sales, revenue, and average rating (joins with reviews)
+4. Lists recent orders along with customer email and all product names in that order
+
+Return valid SQLite SQL that I can run directly.
